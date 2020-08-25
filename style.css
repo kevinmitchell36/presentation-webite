@@ -51,7 +51,7 @@ body {
   border: none;
   margin-top: 1rem;
   font-size: 1.1rem;
-  transition: all;
+  transition: all 0.3s ease-in;
 }
 
 .btn:hover, 
@@ -65,3 +65,27 @@ body {
   color: #333;
 }
 
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards
+  ease-in;
+}
+
+#page-1 p {
+  transform: translatex(-1800px);
+  animation: text var(--animate-speed) forwards
+  ease-in 1s;
+}
+
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+}
